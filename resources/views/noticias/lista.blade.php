@@ -8,8 +8,9 @@
 <body>
     <h1>Noticias</h1>
     @foreach($noticias as $noticia)
-        <h3><a href="{{route("noticias.detalles",$noticia["id"])}}">{{ $noticia["titulo"] }}</a></h3>
-        <p>{{ $noticia["fecha"] }}</p>
+        <h3><a href="{{route("noticias.detalles",$noticia->id)}}">{{ $noticia->titulo }}</a></h3>
+        <p>{{ $noticia->fecha }}</p>
+        <p>{{ $noticia->autor }}</p>
         
     @endforeach
 </body>
