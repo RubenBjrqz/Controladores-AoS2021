@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lista de noticias</title>
-</head>
-<body>
+@extends('layouts.admin')
+@section('contenido_principal')
     <h1>Lista de noticias</h1>
     @if(Session::has("exito"))
-     <p style="color: green"> {{ Session::get("exito") }} </p>
+        <p style="color: green"> {{ Session::get("exito") }} </p>
     @endif
     @if(Session::has("error"))
         <p style="color: red"> {{ Session::get("error") }}</p>
     @endif
     <a href="{{ route("admin.noticias.create") }}">Crear nueva noticia</a>
-    <table>
+    <table class="table table-bordered">
         <thead>
             <th>Titulo</th>
             <th>Acciones</th>
@@ -33,5 +26,4 @@
             @endforeach
         </tbody>
     </table>
-</body>
-</html>
+@endsection
