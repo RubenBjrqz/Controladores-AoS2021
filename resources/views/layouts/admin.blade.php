@@ -164,6 +164,12 @@
           <a href="#" class="d-block">Alexander Pierce</a>
         </div>
       </div>
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <form method="POST" action="{{route('logout')}}">
+          @csrf
+          <button class="btn btn-secondary btn-sm" type="submit">Cerrar sesión</button>
+        </form>
+      </div>
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
