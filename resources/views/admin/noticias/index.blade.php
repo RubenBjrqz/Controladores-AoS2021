@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+@section("titulo", "Noticias")
 @section('contenido_principal')
     <h1>Lista de noticias</h1>
     @if(Session::has("exito"))

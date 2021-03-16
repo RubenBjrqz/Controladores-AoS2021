@@ -1,3 +1,4 @@
+@section("titulo", "Editar noticias")
 <!DOCTYPE html>
 <html lang="en">
 <head>

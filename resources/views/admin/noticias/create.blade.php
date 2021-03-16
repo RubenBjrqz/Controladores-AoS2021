@@ -1,4 +1,5 @@
 @extends("layouts.admin")
+@section("titulo", "Nueva noticia")
 @section('contenido_principal')
     <a href="{{ route("admin.noticias.index")}} ">Volver a lista de noticias</a>
     <h1>Crear nueva noticia</h1>
