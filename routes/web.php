@@ -22,7 +22,6 @@ require __DIR__.'/auth.php';
 
 
 //Rutas de noticias
-Route::get('/', [InicioController::class, "index"]);
 Route::get('/contacto', [InicioController::class, "contacto"]);
 
 Route::get('/noticias', [NoticiaController::class, "lista"])->name("noticias");
@@ -50,3 +49,8 @@ Route::get("/admin/blank", [AdminNoticiaController::class, "blank"])->name("admi
 
 //Tablero
 Route::get("/admin", [TableroController::class, "tablero"])->name("admin.tablero");
+
+//Redirect
+Route::get('/', function () {
+return redirect('noticias');
+});
